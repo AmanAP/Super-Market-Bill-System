@@ -1,15 +1,15 @@
-#includebitsstdc++.h
-#includeiostream
+#include<bits/stdc++.h>
+#include<iostream>
 using namespace std;
 
 class Shopping {
-private
+private:
     int pcode;
     int price;
     float dis;
     string pname;
 
-public
+public:
     void menu();
     void admin();
     void buyer();
@@ -20,56 +20,56 @@ public
     void receipt();
 };
 
-void Shoppingmenu() {
-label
+void Shopping::menu() {
+label:
     int choice;
     string email;
     string password;
-f
-    coutttn;
-    couttt                                              n;
-    couttt          SUPER  MARKET  MAIN  MANU           n;
-    couttt                                              n;
-    coutttnn;
-    couttt .................................. n;
-    couttt                                  n;
-    couttt      1).  ADMINISTRATIVE         n;
-    couttt                                  n;
-    couttt      2).  BUYER                  n;
-    couttt                                  n;
-    couttt      3).  EXIT                   n;
-    couttt                                  n;
-    couttt .................................. n;
-    couttt PLEASE ENTER YOUR CHOICE -nntt-  ;
-    cinchoice;
+f:
+    cout<<"\t\t************************************************\n";
+    cout<<"\t\t*                                              *\n";
+    cout<<"\t\t*          SUPER  MARKET  MAIN  MANU           *\n";
+    cout<<"\t\t*                                              *\n";
+    cout<<"\t\t************************************************\n\n";
+    cout<<"\t\t .................................. \n";
+    cout<<"\t\t|                                  |\n";
+    cout<<"\t\t|      1).  ADMINISTRATIVE         |\n";
+    cout<<"\t\t|                                  |\n";
+    cout<<"\t\t|      2).  BUYER                  |\n";
+    cout<<"\t\t|                                  |\n";
+    cout<<"\t\t|      3).  EXIT                   |\n";
+    cout<<"\t\t|                                  |\n";
+    cout<<"\t\t .................................. \n";
+    cout<<"\t\t PLEASE ENTER YOUR CHOICE :-\n\n\t\t-  ";
+    cin>>choice;
     switch(choice) {
-    case 1 {
-        couttt PLEASE  LOGIN nn;
-        couttt ENTER  YOUR  EMAIL  nntt-  ;
-        cinemail;
-        coutntt ENTER  YOUR  PASSWORD nntt-  ;
-        cinpassword;
-        if(email==ashwin123@gmail.com && password==Ashwin123@) {
+    case 1: {
+        cout<<"\t\t PLEASE  LOGIN \n\n";
+        cout<<"\t\t ENTER  YOUR  EMAIL  \n\n\t\t-  ";
+        cin>>email;
+        cout<<"\n\t\t ENTER  YOUR  PASSWORD \n\n\t\t-  ";
+        cin>>password;
+        if(email=="ashwin123@gmail.com" && password=="Ashwin123@") {
             admin();
             break;
         }
         else {
-            coutttINVAILIDE  EMAIL  PASSWORD  n;
+            cout<<"\t\tINVAILIDE  EMAIL / PASSWORD  \n";
             goto f;
         }
 
     }
 
-    case 2 {
+    case 2: {
         buyer();
     }
 
-    case 3 {
+    case 3: {
         exit(0);
     }
 
-    default  {
-        coutttINVAILIDE  CHOICE n;
+    default : {
+        cout<<"\t\tINVAILIDE  CHOICE \n";
     }
 
 
@@ -78,51 +78,51 @@ f
 
 }
 
-void Shoppingadmin() {
-label
+void Shopping::admin() {
+label:
     int choice;
-    coutendl;
-    coutttn;
-    couttt                                     n;
-    couttt  WELCOME  IN  ADMINISTRATIVE  MENU  n;
-    couttt                                     n;
-    coutttn;
-    couttt                                     n;
-    couttt-1).  ADD  NEW  PRODUCT              n;
-    couttt                                     n;
-    couttt-2).  REMOVE  PRODUCT                n;
-    couttt                                     n;
-    couttt-3).  MODIFY  PRODUCT                n;
-    couttt                                     n;
-    couttt-4).  BACK  TO  MAIN  MENU           n;
-    couttt                                     nn;
-    couttt PLEASE ENTER YOUR CHOICE -nntt-  ;
-    cinchoice;
+    cout<<endl;
+    cout<<"\t\t***************************************\n";
+    cout<<"\t\t*                                     *\n";
+    cout<<"\t\t*  WELCOME  IN  ADMINISTRATIVE  MENU  *\n";
+    cout<<"\t\t*                                     *\n";
+    cout<<"\t\t***************************************\n";
+    cout<<"\t\t|                                     |\n";
+    cout<<"\t\t|-1).  ADD  NEW  PRODUCT              |\n";
+    cout<<"\t\t|                                     |\n";
+    cout<<"\t\t|-2).  REMOVE  PRODUCT                |\n";
+    cout<<"\t\t|                                     |\n";
+    cout<<"\t\t|-3).  MODIFY  PRODUCT                |\n";
+    cout<<"\t\t|                                     |\n";
+    cout<<"\t\t|-4).  BACK  TO  MAIN  MENU           |\n";
+    cout<<"\t\t|                                     |\n\n";
+    cout<<"\t\t PLEASE ENTER YOUR CHOICE :-\n\n\t\t-  ";
+    cin>>choice;
 
 
     switch(choice) {
-    case 1 {
+    case 1: {
         add();
         break;
     }
 
-    case 2 {
+    case 2: {
         rem();
         break;
     }
 
-    case 3 {
+    case 3: {
         edit();
         break;
     }
 
-    case 4 {
+    case 4: {
         menu();
         break;
     }
 
-    default  {
-        coutttINVAILIDE  CHOICE n;
+    default : {
+        cout<<"\t\tINVAILIDE  CHOICE \n";
     }
 
     }
@@ -130,37 +130,37 @@ label
 }
 
 
-void Shoppingbuyer() {
-label
+void Shopping::buyer() {
+label:
     int choice;
-    coutendl;
-    coutttn;
-    couttt                                     n;
-    couttt        WELCOM IN  BUYER MENU        n;
-    couttt                                     n;
-    coutttn;
-    couttt                                     n;
-    couttt-1).  BUY  A  PRODUCT                n;
-    couttt                                     n;
-    couttt-2).  BACK  TO  MAIN  MENU           n;
-    couttt                                     nn;
-    couttt PLEASE ENTER YOUR CHOICE -nntt-  ;
-    cinchoice;
+    cout<<endl;
+    cout<<"\t\t***************************************\n";
+    cout<<"\t\t*                                     *\n";
+    cout<<"\t\t*        WELCOM IN  BUYER MENU        *\n";
+    cout<<"\t\t*                                     *\n";
+    cout<<"\t\t***************************************\n";
+    cout<<"\t\t|                                     |\n";
+    cout<<"\t\t|-1).  BUY  A  PRODUCT                |\n";
+    cout<<"\t\t|                                     |\n";
+    cout<<"\t\t|-2).  BACK  TO  MAIN  MENU           |\n";
+    cout<<"\t\t|                                     |\n\n";
+    cout<<"\t\t PLEASE ENTER YOUR CHOICE :-\n\n\t\t-  ";
+    cin>>choice;
 
 
     switch(choice) {
-    case 1 {
+    case 1: {
         receipt();
         break;
     }
 
-    case 2 {
+    case 2: {
         menu();
         break;
     }
 
-    default  {
-        coutttINVAILIDE  CHOICE n;
+    default : {
+        cout<<"\t\tINVAILIDE  CHOICE \n";
     }
 
     }
@@ -168,8 +168,8 @@ label
 }
 
 
-void Shoppingadd() {
-label
+void Shopping::add() {
+label:
     fstream data;
     int c;
     int token=0;
@@ -177,48 +177,48 @@ label
     float p;
     string m;
 
-    coutntt ADD  NEW  PRODUCT nn;
-    coutntt ENTER  PRODUCT  CODE ntt- ;
-    cinpcode;
-    coutntt ENTER  PRODUCT  NAME ntt- ;
-    cinpname;
-    coutntt ENTER  PRODUCT  PRICE ntt- ;
-    cinprice;
-    coutntt ENTER  AVAILABLE DISCOUNT ntt- ;
-    cindis;
+    cout<<"\n\t\t ADD  NEW  PRODUCT \n\n";
+    cout<<"\n\t\t ENTER  PRODUCT  CODE \n\t\t- ";
+    cin>>pcode;
+    cout<<"\n\t\t ENTER  PRODUCT  NAME \n\t\t- ";
+    cin>>pname;
+    cout<<"\n\t\t ENTER  PRODUCT  PRICE \n\t\t- ";
+    cin>>price;
+    cout<<"\n\t\t ENTER  AVAILABLE DISCOUNT \n\t\t- ";
+    cin>>dis;
 
-    data.open(product.txt,iosin);
+    data.open("product.txt",ios::in);
 
     if(!data) {
-        data.open(product.txt,iosappiosout);
-        data pcode pname price disn;
+        data.open("product.txt",ios::app|ios::out);
+        data<<" "<<pcode<<" "<<pname<<" "<<price<<" "<<dis<<"\n";
         data.close();
     } else {
-        datacmpd;
+        data>>c>>m>>p>>d;
         while(!data.eof()) {
             if(c==pcode) {
                 token++;
             }
-            datacmpd;
+            data>>c>>m>>p>>d;
         }
         data.close();
 
 
         if(token==1) {
-            coutntt DUPLICATE  RECORDEn;
+            cout<<"\n\t\t DUPLICATE  RECORDE\n";
             goto label;
         } else {
-            data.open(product.txt,iosappiosout);
-            data pcode pname price disn;
+            data.open("product.txt",ios::app|ios::out);
+            data<<" "<<pcode<<" "<<pname<<" "<<price<<" "<<dis<<"\n";
             data.close();
 
         }
     }
-    couttt RECORD  INSERTED;
+    cout<<"\t\t RECORD  INSERTED";
 }
 
 
-void Shoppingedit() {
+void Shopping::edit() {
     fstream data1,data2;
     int pkey;
     int token=0;
@@ -227,119 +227,119 @@ void Shoppingedit() {
     float d;
     string m;
 
-    coutnttMODIFY  THE  PRODUCT nn;
-    couttt ENTER  THE PRODUCT  CODE ntt-;
-    cinpkey;
+    cout<<"\n\t\tMODIFY  THE  PRODUCT \n\n";
+    cout<<"\t\t ENTER  THE PRODUCT  CODE \n\t\t-";
+    cin>>pkey;
 
-    data1.open(product.txt,iosin);
+    data1.open("product.txt",ios::in);
     if(!data1) {
-        coutPRODUCT  DOESN'T  FOUND;
+        cout<<"PRODUCT  DOESN'T  FOUND";
     }
     else {
-        data2.open(product1.txt,iosappiosout);
-        data1pcodepnamepricedis;
+        data2.open("product1.txt",ios::app|ios::out);
+        data1>>pcode>>pname>>price>>dis;
         while(!data1.eof()) {
             if(pkey==pcode) {
-                couttPRODUCT  NEW  CODEnt-;
-                cinc;
-                couttPRODUCT  NEW  NAMEnt-;
-                cinm;
-                couttPRODUCT  NEW  PRICE nt-;
-                cinp;
-                couttPROCT NEW  DISTCOUNTnt-;
-                cind;
-                data2 c
-                      m
-                      p
-                      d
-                     n;
-                couttRECORD UPDATED ;
+                cout<<"\tPRODUCT  NEW  CODE\n\t-";
+                cin>>c;
+                cout<<"\tPRODUCT  NEW  NAME\n\t-";
+                cin>>m;
+                cout<<"\tPRODUCT  NEW  PRICE \n\t-";
+                cin>>p;
+                cout<<"\tPROCT NEW  DISTCOUNT\n\t-";
+                cin>>d;
+                data2<<" "<<c
+                     <<" "<<m
+                     <<" "<<p
+                     <<" "<<d
+                     <<"\n";
+                cout<<"\tRECORD UPDATED ";
                 token++;
             }
             else {
-                data2 
-                     pcode 
-                     pname 
-                     price 
-                     disn;
+                data2<<" "
+                     <<pcode<<" "
+                     <<pname<<" "
+                     <<price<<" "
+                     <<dis<<"\n";
             }
-            data1pcodepnamepricedis;
+            data1>>pcode>>pname>>price>>dis;
         }
         data1.close();
         data2.close();
-        remove(product.txt);
-        rename(product1.txt,product.txt);
+        remove("product.txt");
+        rename("product1.txt","product.txt");
         if(token==0) {
-            couttRECORD NOT FOUND ;
+            cout<<"\tRECORD NOT FOUND ";
         }
     }
 }
 
 
-void Shoppingrem() {
+void Shopping::rem() {
 
     fstream data1,data2;
     int pkey;
     int token=0;
 
-    coutnttDELETE  THE  PRODUCT nn;
-    couttt ENTER  THE PRODUCT  CODE ntt-;
-    cinpkey;
+    cout<<"\n\t\tDELETE  THE  PRODUCT \n\n";
+    cout<<"\t\t ENTER  THE PRODUCT  CODE \n\t\t-";
+    cin>>pkey;
 
-    data1.open(product.txt,iosin);
+    data1.open("product.txt",ios::in);
     if(!data1) {
-        coutPRODUCT  DOESN'T  FOUND;
+        cout<<"PRODUCT  DOESN'T  FOUND";
     }
     else {
-        data2.open(product1.txt,iosappiosout);
-        data1pcodepnamepricedis;
+        data2.open("product1.txt",ios::app|ios::out);
+        data1>>pcode>>pname>>price>>dis;
         while(!data1.eof()) {
             if(pkey==pcode) {
-                couttPRODUCT  DELETED ;
+                cout<<"\tPRODUCT  DELETED ";
                 token++;
             }
             else {
-                data2 
-                     pcode 
-                     pname 
-                     price 
-                     disn;
+                data2<<" "
+                     <<pcode<<" "
+                     <<pname<<" "
+                     <<price<<" "
+                     <<dis<<"\n";
             }
-            data1pcodepnamepricedis;
+            data1>>pcode>>pname>>price>>dis;
         }
         data1.close();
         data2.close();
-        remove(product.txt);
-        rename(product1.txt,product.txt);
+        remove("product.txt");
+        rename("product1.txt","product.txt");
         if(token==0) {
-            couttRECORD NOT FOUND ;
+            cout<<"\tRECORD NOT FOUND ";
         }
     }
 }
 
 
-void Shoppinglist() {
+void Shopping::list() {
     fstream data;
-    data.open(product.txt,iosin);
-    if(!data) coutproduct not available ;
+    data.open("product.txt",ios::in);
+    if(!data) cout<<"product not available ";
     else {
-        couttttt LIST  OF  PRODUCT nn;
-        coutttCODEttNAMEttPRICEttDISCOUNT(%)n;
-        datapcodepnamepricedis;
+        cout<<"\t\t\t\t* LIST  OF  PRODUCT *\n\n";
+        cout<<"\t\tCODE\t\tNAME\t\tPRICE\t\tDISCOUNT(%)\n";
+        data>>pcode>>pname>>price>>dis;
         while(!data.eof()) {
-            coutntt
-                pcodett
-                pnamett
-                pricett
-                disn;
-            datapcodepnamepricedis;
+            cout<<"\n\t\t"
+                <<pcode<<"\t\t"
+                <<pname<<"\t\t"
+                <<price<<"\t\t"
+                <<dis<<"\n";
+            data>>pcode>>pname>>price>>dis;
         }
     }
     data.close();
 }
 
 
-void Shoppingreceipt() {
+void Shopping::receipt() {
     fstream data;
     int code_arr[100],quntity_arr[100];
     int count=0,discount;
@@ -348,58 +348,58 @@ void Shoppingreceipt() {
     float amount=0;
     float dis=0;
     float total=0;
-    data.open(product.txt,iosin);
+    data.open("product.txt",ios::in);
     if(!data) {
-        coutempty market;
+        cout<<"empty market";
     } else {
         data.close();
         list();
-m
+m:
         
-        coutntt   place order n;
-        couttt----------------n;
+        cout<<"\n\t\t   place order \n";
+        cout<<"\t\t----------------\n";
         do {
-            couttEnter the product codent-;
-            cincode_arr[count];
-            couttEnter quntitynt-;
-            cinquntity_arr[count];
+            cout<<"\tEnter the product code\n\t-";
+            cin>>code_arr[count];
+            cout<<"\tEnter quntity\n\t-";
+            cin>>quntity_arr[count];
 
-            for(int i=0; icount; i++) {
+            for(int i=0; i<count; i++) {
                 if(code_arr[count]==code_arr[i]) {
-                    coutduplicate;
+                    cout<<"duplicate";
                     goto m;
                 }
             }
 
-            couttdo you want to buy another productn;
-            coutntEnter y for yes , n for nont-;
-            cinchoice;
+            cout<<"\tdo you want to buy another product\n";
+            cout<<"\n\tEnter y for yes , n for no\n\t-";
+            cin>>choice;
             count++;
         } while(choice=='y');
 
-        for(int i=0; i=count; i++) coutcode_arr[i]endl;
+        for(int i=0; i<=count; i++) cout<<code_arr[i]<<endl;
 
-        coutproduct codetproduct nametpricediscounttprice after discountn;
-        for(int i=0; icount; i++) {
-            data.open(product.txt,iosin);
-            datapcodepnamepricedis;
+        cout<<"product code\tproduct name\tprice\discount\tprice after discount\n";
+        for(int i=0; i<count; i++) {
+            data.open("product.txt",ios::in);
+            data>>pcode>>pname>>price>>dis;
             while(!data.eof()) {
                 if(code_arr[i]==pcode) {
-                    amount=pricequntity_arr[i];
-                    discount=amount-(amountdis100);
+                    amount=price*quntity_arr[i];
+                    discount=amount-(amount*dis/100);
                     total=total+discount;
-                    coutpcodett
-                        pnamett
-                        pricett
-                        distt
-                        discountn;
+                    cout<<pcode<<"\t\t"
+                        <<pname<<"\t\t"
+                        <<price<<"\t\t"
+                        <<dis<<"\t\t"
+                        <<discount<<"\n";
                 }
-                datapcodepnamepricedis;
+                data>>pcode>>pname>>price>>dis;
             }
             data.close();
         }
-        coutntTotal Amount  -;
-        couttotal;
+        cout<<"\n\tTotal Amount  -";
+        cout<<total;
     }
 
 }
